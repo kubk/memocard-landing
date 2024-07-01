@@ -18,7 +18,7 @@ import {
   Github,
 } from "lucide-react";
 
-const AchievementCard = ({ icon: Icon, title, description }) => (
+const AchievementCard = ({ icon: Icon, title, description }: any) => (
   <div className="bg-white p-6 rounded-lg flex items-center">
     <Icon className="text-blue-500 w-12 h-12 mr-4 flex-shrink-0" />
     <div>
@@ -28,7 +28,7 @@ const AchievementCard = ({ icon: Icon, title, description }) => (
   </div>
 );
 
-const FeatureCard = ({ icon: Icon, title, description }) => (
+const FeatureCard = ({ icon: Icon, title, description }: any) => (
   <div className="bg-white p-6 rounded-lg shadow-md">
     <Icon className="text-blue-500 w-12 h-12 mb-4" />
     <h3 className="text-xl font-semibold mb-2">{title}</h3>
@@ -36,7 +36,7 @@ const FeatureCard = ({ icon: Icon, title, description }) => (
   </div>
 );
 
-const PlanCard = ({ title, features, isProPlan }) => (
+const PlanCard = ({ title, features, isProPlan }: any) => (
   <div
     className={`bg-white p-6 rounded-lg shadow-md ${isProPlan ? "border-2 border-blue-500" : ""}`}
   >
@@ -46,7 +46,7 @@ const PlanCard = ({ title, features, isProPlan }) => (
       {title}
     </h3>
     <ul className="space-y-2">
-      {features.map((feature, index) => (
+      {features.map((feature: any, index: any) => (
         <li key={index} className="flex items-start">
           {feature.included ? (
             <Check className="text-green-500 mr-2 flex-shrink-0" />
@@ -60,11 +60,11 @@ const PlanCard = ({ title, features, isProPlan }) => (
   </div>
 );
 
-const FooterLinkGroup = ({ title, links }) => (
+const FooterLinkGroup = ({ title, links }: any) => (
   <div>
     <h4 className="font-semibold mb-2">{title}</h4>
     <ul className="space-y-2">
-      {links.map((link, index) => (
+      {links.map((link: any, index: any) => (
         <li key={index}>
           <a href={link.href} className="flex items-center hover:text-blue-300">
             {link.icon && <link.icon className="mr-2" size={16} />}

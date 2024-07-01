@@ -6,6 +6,7 @@
     "dev": "next dev",
     "build-and-serve": "next build && npx serve out",
     "build": "next build",
+    "typecheck": "npx tsc --noEmit",
     "start": "next start",
     "lint": "next lint"
   },
