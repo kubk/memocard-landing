@@ -170,7 +170,7 @@ const footerLinks = {
     {
       icon: Github,
       text: "GitHub",
-      href: "https://github.com/kubk/memocard",
+      href: "https://github.com/kubk/memo-card",
     },
   ],
 };
