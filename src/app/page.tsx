@@ -11,9 +11,22 @@ import {
   Headphones,
   Check,
   X,
+  Award,
+  Users,
   Mail,
   Youtube,
+  Github,
 } from "lucide-react";
+
+const AchievementCard = ({ icon: Icon, title, description }) => (
+  <div className="bg-white p-6 rounded-lg flex items-center">
+    <Icon className="text-blue-500 w-12 h-12 mr-4 flex-shrink-0" />
+    <div>
+      <h3 className="text-xl font-semibold mb-2">{title}</h3>
+      <p className="text-gray-600">{description}</p>
+    </div>
+  </div>
+);
 
 const FeatureCard = ({ icon: Icon, title, description }) => (
   <div className="bg-white p-6 rounded-lg shadow-md">
@@ -154,6 +167,11 @@ const footerLinks = {
       text: "Telegram Channel",
       href: "https://t.me/memo_card_bot_channel",
     },
+    {
+      icon: Github,
+      text: "GitHub",
+      href: "https://github.com/kubk/memocard",
+    },
   ],
 };
 
@@ -237,13 +255,19 @@ const LandingPage = () => {
 
       {/* Hero Section */}
       <section className="bg-blue-600 text-white py-20">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4 text-center max-w-6xl">
           <h1 className="text-4xl md:text-6xl font-bold mb-4">
-            Award-winning app for improving memory with spaced repetition
+            Retain what you learn
           </h1>
           <div className={"text-center"}>
-            <p className="text-xl mb-8">
-              Master languages, history, and more with MemoCard
+            <p className="text-xl mb-2">
+              Within an hour, up to 60% of new information can slip away, and by
+              the end of a week, only about 10% may remain. However, consistent
+              revisiting of the information fixes it.
+            </p>
+            <p className={"text-xl mb-8"}>
+              MemoCard uses the proven flashcard method, making sure you never
+              forget what you learn.
             </p>
             <a
               href="https://app.memocard.org"
@@ -262,19 +286,20 @@ const LandingPage = () => {
       </section>
 
       {/* Why Section */}
-      <section className="py-16 bg-white">
+      <section className="bg-white">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-8">Why MemoCard?</h2>
-          <p className="text-lg mb-4">
-            People tend to forget things. Within an hour, up to 60% of new
-            information can slip away, and by the end of a week, only about 10%
-            may remain. However, consistent revisiting of the information
-            combats this decline.
-          </p>
-          <p className="text-lg">
-            This bot uses the proven flashcard method, assisting users in
-            retaining and mastering languages, history, and more.
-          </p>
+          <div className="grid md:grid-cols-2 gap-8">
+            <AchievementCard
+              icon={Award}
+              title="Award-Winning App"
+              description="Recognized with a prize in the worldwide official Telegram mini app competition"
+            />
+            <AchievementCard
+              icon={Users}
+              title="User Base"
+              description="Trusted by more than 4,000 users"
+            />
+          </div>
         </div>
       </section>
 
