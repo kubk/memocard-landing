@@ -1,7 +1,8 @@
 "use client";
 import React from "react";
 
-export const YoutubeTutorial = () => {
+export const YoutubeTutorial = (props: { videoId: string }) => {
+  const { videoId } = props;
   return (
     <div
       className={
@@ -12,7 +13,7 @@ export const YoutubeTutorial = () => {
       }}
     >
       <iframe
-        src="https://www.youtube.com/embed/nU1QG5KCh44"
+        src={"https://www.youtube.com/embed/" + videoId}
         frameBorder="0"
         allow="accelerometer; autoplay; encrypted-media; gyroscope;"
         allowFullScreen

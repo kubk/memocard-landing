@@ -1,4 +1,4 @@
-import { Translation } from "@/shared/translations";
+import { LanguageEnum, Translation } from "@/shared/translations";
 import { links } from "@/shared/links";
 import { YoutubeTutorial } from "@/components/youtubeTutorial";
 import { AchievementCard } from "@/components/landing-page/achievementCard";
@@ -8,8 +8,12 @@ import { PlanCard } from "@/components/landing-page/planCard";
 import React from "react";
 import { LanguageSwitcher } from "@/components/language-switcher";
 
-export const LandingPage = (props: { translation: Translation }) => {
-  const { translation } = props;
+export const LandingPage = (props: {
+  translation: Translation;
+  language: LanguageEnum;
+}) => {
+  const { translation, language } = props;
+  const videoId = language === "ru" ? "GPkoonk1LwI" : "nU1QG5KCh44";
 
   return (
     <div className="min-h-screen bg-gray-100">
@@ -71,7 +75,7 @@ export const LandingPage = (props: { translation: Translation }) => {
       <section className="bg-white">
         <div className="container px-4 py-6 flex flex-col md:flex-row mx-auto justify-between md:items-center">
           <div className={"md:order-2"}>
-            <YoutubeTutorial />
+            <YoutubeTutorial videoId={videoId} />
           </div>
 
           <div className={"md:order-1"}>

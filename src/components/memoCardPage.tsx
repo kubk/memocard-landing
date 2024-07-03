@@ -10,7 +10,7 @@ export const MemoCardPage = (props: Props) => {
 
   return (
     <>
-      <LandingPage translation={translation} />
+      <LandingPage language={language} translation={translation} />
       <Footer translation={translation} />
     </>
   );
