@@ -6,9 +6,21 @@ locales=("ru")
 # Output directory
 OUT_DIR="out"
 
-# Function to perform sed replacement
+# Detect the operating system
+if [[ "$OSTYPE" == "darwin"* ]]; then
+    # macOS
+    sed_cmd() {
+        sed -i '' "$@"
+    }
+else
+    # Linux and others
+    sed_cmd() {
+        sed -i "$@"
+    }
+fi
+
 sed_replace() {
-    sed -i '' "s/$1/$2/g" "$3"
+    sed_cmd "s/$1/$2/g" "$3"
 }
 
 # Loop through each locale
