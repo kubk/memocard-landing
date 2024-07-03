@@ -1,4 +1,3 @@
-import { MemoCardLayout } from "@/components/memoCardPage";
 import type { Metadata } from "next";
 import { ReactNode } from "react";
 
@@ -15,7 +14,6 @@ export const metadata: Metadata = {
     "Улучшите свою память с помощью интервального повторения. Изучайте языки, историю или другие предметы с помощью проверенного метода карточек.",
 };
 
-export default function Layout(props: { children: ReactNode }) {
-  const { children } = props;
-  return <MemoCardLayout language={"ru"}>{children}</MemoCardLayout>;
+export default function RootLayout({ children }: { children: ReactNode }) {
+  return children;
 }

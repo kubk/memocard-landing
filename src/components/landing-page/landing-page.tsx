@@ -1,10 +1,10 @@
 import { Translation } from "@/shared/translations";
 import { links } from "@/shared/links";
 import { YoutubeTutorial } from "@/components/youtubeTutorial";
-import { AchievementCard } from "@/app/components/achievementCard";
+import { AchievementCard } from "@/components/landing-page/achievementCard";
 import { Award, Users } from "lucide-react";
-import { FeatureCard } from "@/app/components/featureCard";
-import { PlanCard } from "@/app/components/planCard";
+import { FeatureCard } from "@/components/landing-page/featureCard";
+import { PlanCard } from "@/components/landing-page/planCard";
 import React from "react";
 
 export const LandingPage = (props: { translation: Translation }) => {
@@ -43,20 +43,20 @@ export const LandingPage = (props: { translation: Translation }) => {
             {translation.hero.title}
           </h1>
           <div className={"text-center flex flex-col items-center"}>
-            <p className="text-xl mb-2">{translation.hero.description1}</p>
+            <p className="text-xl mb-4">{translation.hero.description1}</p>
             <p className={"text-xl mb-8"}>{translation.hero.description2}</p>
             <div className={"flex"}>
               <a
                 href={links.appBrowser}
                 className="bg-white text-blue-600 px-6 py-3 rounded-l-2xl border-r-2 border-blue-600 font-semibold hover:bg-blue-100 transition duration-300"
               >
-                Try in browser
+                {translation.hero.tryBrowser}
               </a>
               <a
                 href={links.appTelegram}
                 className="bg-white text-blue-600 px-6 py-3 rounded-r-2xl font-semibold hover:bg-blue-100 transition duration-300"
               >
-                Try in Telegram
+                {translation.hero.tryTelegram}
               </a>
             </div>
           </div>
@@ -73,16 +73,16 @@ export const LandingPage = (props: { translation: Translation }) => {
           <div className={"md:order-1"}>
             <AchievementCard
               icon={Award}
-              title="Award-Winning App"
-              description="Scored a prize in the worldwide Telegram mini app competition"
+              title={translation.why.awardWinningTitle}
+              description={translation.why.awardWinningDescription}
             />
           </div>
 
           <div className={"md:order-3"}>
             <AchievementCard
               icon={Users}
-              title="4000+ users"
-              description="Join thousands of users"
+              title={translation.why.usersTitle}
+              description={translation.why.usersDescription}
             />
           </div>
         </div>
@@ -91,9 +91,11 @@ export const LandingPage = (props: { translation: Translation }) => {
       {/* Features Section */}
       <section className="py-16 bg-gray-100">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-8">Features</h2>
+          <h2 className="text-3xl font-bold mb-8">
+            {translation.features.title}
+          </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {translation.features.map((feature, index) => (
+            {translation.features.list.map((feature, index) => (
               <FeatureCard key={index} {...feature} />
             ))}
           </div>
@@ -103,14 +105,13 @@ export const LandingPage = (props: { translation: Translation }) => {
       {/* Use Cases Section */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-8">Use Cases</h2>
+          <h2 className="text-3xl font-bold mb-8">
+            {translation.useCases.title}
+          </h2>
           <ul className="list-disc pl-5 space-y-2">
-            <li>Learn a new language as a tourist</li>
-            <li>Memorize complex bash commands or programming constructs</li>
-            <li>Study Latin names of muscles for medical exams</li>
-            <li>Improve geography skills</li>
-            <li>Practice music harmony</li>
-            <li>Retain key historical facts</li>
+            {translation.useCases.list.map((item, i) => (
+              <li key={i}>{item}</li>
+            ))}
           </ul>
         </div>
       </section>
@@ -118,15 +119,13 @@ export const LandingPage = (props: { translation: Translation }) => {
       {/* Why It's Better Than Anki Section */}
       <section className="py-16 bg-gray-100">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-8">Why It's Better Than Anki</h2>
+          <h2 className="text-3xl font-bold mb-8">
+            {translation.whyBetterThanAnki.title}
+          </h2>
           <ul className="list-disc pl-5 space-y-2">
-            <li>No need for plugins - batteries included</li>
-            <li>Decks and folders are easy to share via link</li>
-            <li>
-              Built-in smart push notifications via Telegram. You'll only see
-              them when you have due cards to review
-            </li>
-            <li>No old creepy UI, MemoCard is already good looking</li>
+            {translation.whyBetterThanAnki.list.map((item, i) => (
+              <li key={i}>{item}</li>
+            ))}
           </ul>
         </div>
       </section>
@@ -134,11 +133,11 @@ export const LandingPage = (props: { translation: Translation }) => {
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-8 text-center">
-            Available Plans
+            {translation.plans.title}
           </h2>
           <div className="grid md:grid-cols-2 gap-8">
             <PlanCard
-              title="Free"
+              title={translation.plans.free}
               features={translation.freePlanFeatures.included
                 .map((item) => ({
                   included: true,
@@ -152,7 +151,7 @@ export const LandingPage = (props: { translation: Translation }) => {
                 )}
             />
             <PlanCard
-              title="Pro"
+              title={translation.plans.pro}
               features={translation.proPlanFeatures.included.map((item) => ({
                 included: true,
                 text: item,

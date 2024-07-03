@@ -1,5 +1,5 @@
-import {MemoCardPage} from "@/components/memoCardPage";
+import { MemoCardPage } from "@/components/memoCardPage";
 
 export default function Page() {
-  return <MemoCardPage language={'en'}/>
+  return <MemoCardPage language={"en"} />;
 }

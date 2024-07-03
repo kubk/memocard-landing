@@ -5,7 +5,7 @@ type Props = {
   title: string;
   features: Array<{ included: boolean; text: string }>;
   isProPlan?: boolean;
-}
+};
 
 export const PlanCard = ({ title, features, isProPlan }: Props) => (
   <div

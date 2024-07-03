@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build-and-serve": "next build && npx serve out",
-    "build": "next build",
+    "build-and-serve": "npm run build && npx serve out",
+    "build": "npm run typecheck && next build && ./fix-html-lang.sh",
     "typecheck": "npx tsc --noEmit",
     "start": "next start",
     "lint": "next lint"
