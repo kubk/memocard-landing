@@ -231,19 +231,25 @@ const LandingPage = () => {
       {/* Why Section */}
       <section className="bg-white">
         <div className="container px-4 py-6 flex flex-col md:flex-row mx-auto justify-between">
-          <AchievementCard
-            icon={Award}
-            title="Award-Winning App"
-            description="Scored a prize in the worldwide Telegram mini app competition"
-          />
+          <div className={"md:order-2"}>
+            <YoutubeTutorial />
+          </div>
 
-          <YoutubeTutorial />
+          <div className={"md:order-1"}>
+            <AchievementCard
+              icon={Award}
+              title="Award-Winning App"
+              description="Scored a prize in the worldwide Telegram mini app competition"
+            />
+          </div>
 
-          <AchievementCard
-            icon={Users}
-            title="4000+ users"
-            description="Join thousands of users"
-          />
+          <div className={"md:order-3"}>
+            <AchievementCard
+              icon={Users}
+              title="4000+ users"
+              description="Join thousands of users"
+            />
+          </div>
         </div>
       </section>
 
