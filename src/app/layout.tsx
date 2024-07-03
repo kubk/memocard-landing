@@ -3,6 +3,7 @@ import { Inter as FontSans } from "next/font/google";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
+import { Footer } from "@/app/footer";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -38,6 +39,7 @@ export default function RootLayout({
         )}
       >
         {children}
+        <Footer />
       </body>
     </html>
   );
