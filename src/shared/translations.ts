@@ -36,7 +36,6 @@ export const formatLanguageEnum = (lang: LanguageEnum): string => {
 const en = {
   footer: {
     links: {
-      email: "Email: " + links.supportEmail,
       tgSupport: "Telegram Support",
       runInBrowser: "Run in browser",
       runInTelegram: "Run in Telegram",
@@ -212,7 +211,6 @@ const ru: Translation = {
   },
   footer: {
     links: {
-      email: "Почта: " + links.supportEmail,
       tgSupport: "Поддержка в Telegram",
       runInTelegram: "Запустить в Telegram",
       runInBrowser: "Запустить в браузере",
@@ -356,7 +354,6 @@ const es: Translation = {
   },
   footer: {
     links: {
-      email: "Correo electrónico: " + links.supportEmail,
       tgSupport: "Soporte de Telegram",
       runInTelegram: "Ejecutar en Telegram",
       runInBrowser: "Ejecutar en el navegador",
@@ -515,7 +512,6 @@ const ptBr: Translation = {
   },
   footer: {
     links: {
-      email: "E-mail: " + links.supportEmail,
       tgSupport: "Suporte no Telegram",
       runInTelegram: "Executar no Telegram",
       runInBrowser: "Executar no navegador",

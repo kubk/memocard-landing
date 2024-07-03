@@ -11,7 +11,7 @@ export const Footer = (props: { translation: Translation }) => {
     support: [
       {
         icon: Mail,
-        text: translation.footer.links.email,
+        text: links.supportEmail,
         href: "mailto:" + links.supportEmail,
       },
       {
