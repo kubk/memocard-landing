@@ -204,7 +204,7 @@ const LandingPage = () => {
           <div className={"text-center flex flex-col items-center"}>
             <p className="text-xl mb-2">
               Within an hour, up to 60% of new information can slip away, and by
-              the end of a week, only about 10% may remain.
+              the end of a week, only about 10% remain.
             </p>
             <p className={"text-xl mb-8"}>
               MemoCard uses the proven flashcard method, making sure you never
