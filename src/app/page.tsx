@@ -230,7 +230,7 @@ const LandingPage = () => {
 
       {/* Why Section */}
       <section className="bg-white">
-        <div className="container px-4 py-6 flex flex-col md:flex-row mx-auto justify-between items-center">
+        <div className="container px-4 py-6 flex flex-col md:flex-row mx-auto justify-between md:items-center">
           <div className={"md:order-2"}>
             <YoutubeTutorial />
           </div>
