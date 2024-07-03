@@ -14,6 +14,7 @@ export const LandingPage = (props: {
 }) => {
   const { translation, language } = props;
   const videoId = language === "ru" ? "GPkoonk1LwI" : "nU1QG5KCh44";
+  const youtubeChannelLink = language === 'ru' ? links.youtubeChannelRu : links.youtubeChannelEn;
 
   return (
     <div className="min-h-screen bg-gray-100">
@@ -30,7 +31,7 @@ export const LandingPage = (props: {
               </li>
               <li>
                 <a
-                  href={links.youtubeChannelEn}
+                  href={youtubeChannelLink}
                   className="hover:text-blue-200"
                 >
                   YouTube
