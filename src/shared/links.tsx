@@ -1,4 +1,5 @@
 export const links = {
+  landing: "https://memocard.org",
   telegramChannel: "https://t.me/memo_card_bot_channel",
   appTelegram: "https://t.me/memo_card_bot",
   appBrowser: "https://app.memocard.org",

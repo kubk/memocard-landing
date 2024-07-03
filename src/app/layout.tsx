@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
+import "./globals.css";
+import { ReactNode } from "react";
 import { Inter as FontSans } from "next/font/google";
 import { GoogleAnalytics } from "@next/third-parties/google";
-import "./globals.css";
 import { cn } from "@/lib/utils";
-import { Footer } from "@/app/footer";
+import { links } from "@/shared/links";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -12,6 +13,13 @@ const fontSans = FontSans({
 
 export const metadata: Metadata = {
   title: "MemoCard",
+  alternates: {
+    canonical: links.landing,
+    languages: {
+      en: links.landing,
+      ru: `${links.landing}/ru/`,
+    },
+  },
   keywords: [
     "anki alternative",
     "flashcard app",
@@ -22,13 +30,11 @@ export const metadata: Metadata = {
     "Improve your memory with spaced repetition. Learn languages, history or other subjects with the proven flashcard method.",
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout(props: { children: ReactNode }) {
+  const { children } = props;
+
   return (
-    <html lang="en">
+    <html lang={"en"}>
       {process.env.NODE_ENV === "production" && (
         <GoogleAnalytics gaId="G-Z45JH1JS3K" />
       )}
@@ -39,7 +45,6 @@ export default function RootLayout({
         )}
       >
         {children}
-        <Footer />
       </body>
     </html>
   );

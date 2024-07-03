@@ -1,9 +1,15 @@
 import { Check, X } from "lucide-react";
 import React from "react";
 
-export const PlanCard = ({ title, features, isProPlan }: any) => (
+type Props = {
+  title: string;
+  features: Array<{ included: boolean; text: string }>;
+  isProPlan?: boolean;
+};
+
+export const PlanCard = ({ title, features, isProPlan }: Props) => (
   <div
-    className={`bg-white p-6 rounded-lg shadow-md ${isProPlan ? "border-2 border-blue-500" : ""}`}
+    className={`bg-white p-6 rounded-2xl shadow-md ${isProPlan ? "border-2 border-blue-500" : ""}`}
   >
     <h3
       className={`text-2xl font-bold mb-4 ${isProPlan ? "text-blue-600" : "text-gray-800"}`}
