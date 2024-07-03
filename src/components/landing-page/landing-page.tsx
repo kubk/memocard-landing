@@ -6,6 +6,7 @@ import { Award, Users } from "lucide-react";
 import { FeatureCard } from "@/components/landing-page/featureCard";
 import { PlanCard } from "@/components/landing-page/planCard";
 import React from "react";
+import { LanguageSwitcher } from "@/components/language-switcher";
 
 export const LandingPage = (props: { translation: Translation }) => {
   const { translation } = props;
@@ -14,9 +15,9 @@ export const LandingPage = (props: { translation: Translation }) => {
     <div className="min-h-screen bg-gray-100">
       {/* Header */}
       <header className="bg-blue-600 text-white py-4">
-        <div className="container mx-auto px-4 flex justify-between items-center">
-          <div className="text-2xl font-bold">MemoCard</div>
-          <nav>
+        <div className="container mx-auto px-4 flex justify-center relative">
+          <div className="text-2xl font-bold absolute left-4">MemoCard</div>
+          <nav className={"hidden md:block"}>
             <ul className="flex space-x-4">
               <li>
                 <a href={links.telegramChannel} className="hover:text-blue-200">
@@ -33,6 +34,9 @@ export const LandingPage = (props: { translation: Translation }) => {
               </li>
             </ul>
           </nav>
+          <div className={"absolute right-4"}>
+            <LanguageSwitcher />
+          </div>
         </div>
       </header>
 

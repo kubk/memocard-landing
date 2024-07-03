@@ -9,7 +9,29 @@ import {
 } from "lucide-react";
 import { links } from "@/shared/links";
 
-export type Language = "en" | "ru";
+export enum LanguageEnum {
+  en = "en",
+  ru = "ru",
+  es = "es",
+  ptBr = "pt-br",
+}
+
+export const languages = Object.values(LanguageEnum) as LanguageEnum[];
+
+export const formatLanguageEnum = (lang: LanguageEnum): string => {
+  switch (lang) {
+    case LanguageEnum.en:
+      return "English";
+    case LanguageEnum.ru:
+      return "Русский";
+    case LanguageEnum.es:
+      return "Español";
+    case LanguageEnum.ptBr:
+      return "Português";
+    default:
+      return lang satisfies never;
+  }
+};
 
 const en = {
   footer: {
@@ -299,11 +321,307 @@ const ru: Translation = {
   },
 };
 
-export const getTranslation = (lang: Language): Translation => {
+const es: Translation = {
+  plans: {
+    title: "Planes disponibles",
+    free: "Gratis",
+    pro: "Pro",
+  },
+  whyBetterThanAnki: {
+    title: "Por qué es mejor que Anki",
+    list: [
+      "No necesita complementos: baterías incluidas",
+      "Las barajas y carpetas son fáciles de compartir mediante un enlace",
+      "Notificaciones inteligentes integradas a través de Telegram. Solo las verás cuando tengas tarjetas pendientes de revisión",
+      "No hay una interfaz antigua y espeluznante, MemoCard ya tiene un buen aspecto",
+    ],
+  },
+  useCases: {
+    title: "Casos de uso",
+    list: [
+      "Aprender un nuevo idioma como turista",
+      "Memorizar comandos bash complejos o construcciones de programación",
+      "Estudiar los nombres latinos de los músculos para exámenes médicos",
+      "Mejorar las habilidades de geografía",
+      "Practicar la armonía musical",
+      "Retener datos históricos clave",
+    ],
+  },
+  why: {
+    awardWinningTitle: "Aplicación galardonada",
+    awardWinningDescription:
+      "Obtuvo un premio en el concurso mundial de mini aplicaciones de Telegram",
+    usersDescription: "Únete a miles de usuarios",
+    usersTitle: "4000+ usuarios",
+  },
+  footer: {
+    links: {
+      email: "Correo electrónico: " + links.supportEmail,
+      tgSupport: "Soporte de Telegram",
+      runInTelegram: "Ejecutar en Telegram",
+      runInBrowser: "Ejecutar en el navegador",
+      youtubeChannelEn: "Canal de YouTube (EN)",
+      youtubeChannelRu: "Canal de YouTube (RU)",
+      telegramChannel: "Canal de Telegram",
+    },
+    groupTitles: {
+      run: "Ejecutar MemoCard",
+      support: "Soporte",
+      other: "Otro",
+    },
+  },
+  features: {
+    title: "Características",
+    list: [
+      {
+        icon: Folder,
+        title: "Organiza tu aprendizaje",
+        description:
+          "Crea tarjetas, barajas y carpetas para estructurar tus conocimientos.",
+      },
+      {
+        icon: BookOpen,
+        title: "Diferentes tipos de tarjetas",
+        description:
+          "Utiliza tarjetas normales o tarjetas con respuestas predefinidas para probar tus conocimientos.",
+      },
+      {
+        icon: Bell,
+        title: "Notificaciones inteligentes",
+        description:
+          "Recibe recordatorios diarios de las tarjetas que necesitan revisión, optimizando tu tiempo de estudio.",
+      },
+      {
+        icon: PenTool,
+        title: "Formato personalizado",
+        description:
+          "Agrega estilo a tus tarjetas para resaltar información importante.",
+      },
+      {
+        icon: Folder,
+        title: "Contenido de calidad",
+        description:
+          "Elige de un catálogo de barajas predefinidas de alta calidad.",
+      },
+      {
+        icon: Pause,
+        title: "Aprendizaje flexible",
+        description:
+          "Congela las tarjetas cuando necesites un descanso o estés demasiado ocupado.",
+      },
+      {
+        icon: Zap,
+        title: "Creación rápida de tarjetas",
+        description:
+          "Genera varias tarjetas a la vez para construir barajas eficientemente. Utiliza la IA para generar tarjetas automáticamente.",
+      },
+      {
+        icon: Headphones,
+        title: "Texto a voz",
+        description:
+          "Aprende palabras extranjeras con funciones de pronunciación automática.",
+      },
+    ],
+  },
+  freePlanFeatures: {
+    included: [
+      "Crea un número ilimitado de barajas, tarjetas y carpetas",
+      "Dos tipos de tarjetas: normales y con opciones de respuesta predefinidas",
+      "Notificaciones sobre tarjetas para revisar",
+      "Formato de tarjetas",
+      "Acceso a un catálogo de barajas de alta calidad moderado",
+      "Congelación de tarjetas para tomar un descanso",
+      "Genera rápidamente varias tarjetas a la vez",
+      "Texto a voz robótico automático compatible con 50 idiomas",
+    ],
+    notIncluded: [
+      "Generación automática de tarjetas a través de IA",
+      "Generación de voz IA de alta calidad",
+      "Duplica barajas y carpetas enteras con barajas y tarjetas",
+      "Enlaces de barajas y carpetas de un solo uso",
+    ],
+  },
+  proPlanFeatures: {
+    included: [
+      "Crea un número ilimitado de barajas, tarjetas y carpetas",
+      "Dos tipos de tarjetas: normales y con opciones de respuesta predefinidas",
+      "Notificaciones sobre tarjetas para revisar",
+      "Formato de tarjetas",
+      "Acceso a un catálogo de barajas de alta calidad moderado",
+      "Congelación de tarjetas para tomar un descanso",
+      "Genera rápidamente varias tarjetas a la vez",
+      "Texto a voz robótico automático compatible con 50 idiomas",
+      "Generación automática de tarjetas a través de IA",
+      "Generación de voz IA de alta calidad",
+      "Duplica barajas y carpetas enteras con barajas y tarjetas",
+      "Enlaces de barajas y carpetas de un solo uso",
+    ],
+  },
+  hero: {
+    title: "Retén lo que aprendes",
+    description1: `En una hora, hasta el 60% de la información nueva puede escapar, y al final de una semana, solo queda alrededor del 10%.`,
+    description2: `MemoCard utiliza el método de tarjetas de memoria probado, asegurándose de que nunca olvides lo que aprendes.`,
+    tryBrowser: "Probar en el navegador",
+    tryTelegram: "Probar en Telegram",
+  },
+};
+
+const ptBr: Translation = {
+  plans: {
+    title: "Planos disponíveis",
+    free: "Grátis",
+    pro: "Pro",
+  },
+  proPlanFeatures: {
+    included: [
+      "Crie um número ilimitado de baralhos, cartões e pastas",
+      "Dois tipos de cartões - regulares e com opções de resposta pré-definidas",
+      "Notificações sobre cartões para revisão",
+      "Formatação de cartões",
+      "Acesso a um catálogo de baralhos de alta qualidade moderado",
+      "Congelamento de cartões para fazer uma pausa",
+      "Gere rapidamente vários cartões de uma vez",
+      "Texto para fala robótico automático suportando 50 idiomas",
+      "Geração automática de cartões via IA",
+      "Geração de fala IA de alta qualidade",
+      "Duplicar baralhos e pastas inteiras com baralhos e cartões",
+      "Links de baralhos e pastas de uso único",
+    ],
+  },
+  why: {
+    awardWinningTitle: "Aplicativo premiado",
+    awardWinningDescription:
+      "Ganhou um prêmio na competição mundial de mini aplicativos do Telegram",
+    usersDescription: "Junte-se a milhares de usuários",
+    usersTitle: "4000+ usuários",
+  },
+  freePlanFeatures: {
+    included: [
+      "Crie um número ilimitado de baralhos, cartões e pastas",
+      "Dois tipos de cartões - regulares e com opções de resposta pré-definidas",
+      "Notificações sobre cartões para revisão",
+      "Formatação de cartões",
+      "Acesso a um catálogo de baralhos de alta qualidade moderado",
+      "Congelamento de cartões para fazer uma pausa",
+      "Gere rapidamente vários cartões de uma vez",
+      "Texto para fala robótico automático suportando 50 idiomas",
+    ],
+    notIncluded: [
+      "Geração automática de cartões via IA",
+      "Geração de fala IA de alta qualidade",
+      "Duplicar baralhos e pastas inteiras com baralhos e cartões",
+      "Links de baralhos e pastas de uso único",
+    ],
+  },
+  footer: {
+    links: {
+      email: "E-mail: " + links.supportEmail,
+      tgSupport: "Suporte no Telegram",
+      runInTelegram: "Executar no Telegram",
+      runInBrowser: "Executar no navegador",
+      youtubeChannelEn: "Canal do YouTube (EN)",
+      youtubeChannelRu: "Canal do YouTube (RU)",
+      telegramChannel: "Canal do Telegram",
+    },
+    groupTitles: {
+      run: "Executar MemoCard",
+      support: "Suporte",
+      other: "Outro",
+    },
+  },
+  useCases: {
+    title: "Casos de uso",
+    list: [
+      "Aprender um novo idioma como turista",
+      "Memorizar comandos bash complexos ou construções de programação",
+      "Estudar os nomes latinos dos músculos para exames médicos",
+      "Melhorar as habilidades de geografia",
+      "Praticar a harmonia musical",
+      "Retenha fatos históricos importantes",
+    ],
+  },
+  whyBetterThanAnki: {
+    title: "Por que é melhor que Anki",
+    list: [
+      "Não precisa de plugins - baterias incluídas",
+      "Baralhos e pastas são fáceis de compartilhar via link",
+      "Notificações inteligentes integradas via Telegram. Você só as verá quando tiver cartões pendentes para revisão",
+      "Sem uma interface antiga e assustadora, o MemoCard já tem uma boa aparência",
+    ],
+  },
+  features: {
+    title: "Recursos",
+    list: [
+      {
+        icon: Folder,
+        title: "Organize seu aprendizado",
+        description:
+          "Crie cartões, baralhos e pastas para estruturar seu conhecimento.",
+      },
+      {
+        icon: BookOpen,
+        title: "Diferentes tipos de cartões",
+        description:
+          "Use cartões regulares ou cartões com respostas pré-definidas para testar seu conhecimento.",
+      },
+      {
+        icon: Bell,
+        title: "Notificações inteligentes",
+        description:
+          "Receba lembretes diários sobre cartões que precisam ser revisados, otimizando seu tempo de estudo.",
+      },
+      {
+        icon: PenTool,
+        title: "Formatação personalizada",
+        description:
+          "Adicione estilo aos seus cartões para enfatizar informações importantes.",
+      },
+      {
+        icon: Folder,
+        title: "Conteúdo de qualidade",
+        description:
+          "Escolha de um catálogo de baralhos pré-fabricados de alta qualidade.",
+      },
+      {
+        icon: Pause,
+        title: "Aprendizado flexível",
+        description:
+          "Congele cartões quando precisar de uma pausa ou estiver muito ocupado.",
+      },
+      {
+        icon: Zap,
+        title: "Criação rápida de cartões",
+        description:
+          "Gere vários cartões de uma vez para construção eficiente de baralhos. Use IA para gerar cartões automaticamente.",
+      },
+      {
+        icon: Headphones,
+        title: "Texto para fala",
+        description:
+          "Aprenda palavras estrangeiras com recursos de pronúncia automática.",
+      },
+    ],
+  },
+  hero: {
+    title: "Retenha o que você aprende",
+    description1: `Em uma hora, até 60% das novas informações podem escapar, e no final de uma semana, apenas cerca de 10% permanecem.`,
+    description2: `O MemoCard usa o método comprovado de cartão de memória, garantindo que você nunca esqueça o que aprendeu.`,
+    tryBrowser: "Experimente no navegador",
+    tryTelegram: "Experimente no Telegram",
+  },
+};
+
+export const getTranslation = (lang: LanguageEnum): Translation => {
   switch (lang) {
-    case "en":
+    case LanguageEnum.en:
       return en;
-    case "ru":
+    case LanguageEnum.ru:
       return ru;
+    case LanguageEnum.es:
+      return es;
+    case LanguageEnum.ptBr:
+      return ptBr;
+    default:
+      return lang satisfies never;
   }
 };

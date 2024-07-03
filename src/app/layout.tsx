@@ -16,8 +16,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: links.landing,
     languages: {
-      en: links.landing,
       ru: `${links.landing}/ru/`,
+      es: `${links.landing}/es/`,
+      "pt-br": `${links.landing}/pt-br/`,
     },
   },
   keywords: [

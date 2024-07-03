@@ -1,8 +1,10 @@
-import { getTranslation, Language } from "@/shared/translations";
+import { getTranslation, LanguageEnum } from "@/shared/translations";
 import { LandingPage } from "@/components/landing-page/landing-page";
 import { Footer } from "@/components/footer";
 
-export const MemoCardPage = (props: { language: Language }) => {
+type Props = { language: LanguageEnum };
+
+export const MemoCardPage = (props: Props) => {
   const { language } = props;
   const translation = getTranslation(language);
 
