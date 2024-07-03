@@ -21,7 +21,7 @@ export const LanguageSwitcher = () => {
       </DropdownMenuTrigger>
       <DropdownMenuContent>
         {languages.map((language, i) => (
-          <DropdownMenuItem asChild key={i}>
+          <DropdownMenuItem className={"py-4 px-6 text-lg"} asChild key={i}>
             <Link href={`/${language === LanguageEnum.en ? "" : language}`}>
               {formatLanguageEnum(language)}
             </Link>
