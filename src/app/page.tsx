@@ -341,6 +341,7 @@ const LandingPage = () => {
               Built-in smart push notifications via Telegram. You'll only see
               them when you have due cards to review
             </li>
+            <li>No old creepy UI, good looking and modern</li>
           </ul>
         </div>
       </section>
