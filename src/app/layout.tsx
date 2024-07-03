@@ -1,14 +1,7 @@
 import type { Metadata } from "next";
-import { Inter as FontSans } from "next/font/google";
-import { GoogleAnalytics } from "@next/third-parties/google";
 import "./globals.css";
-import { cn } from "@/lib/utils";
-import { Footer } from "@/app/footer";
-
-const fontSans = FontSans({
-  subsets: ["latin"],
-  variable: "--font-sans",
-});
+import { ReactNode } from "react";
+import { MemoCardLayout } from "@/components/memoCardPage";
 
 export const metadata: Metadata = {
   title: "MemoCard",
@@ -22,25 +15,6 @@ export const metadata: Metadata = {
     "Improve your memory with spaced repetition. Learn languages, history or other subjects with the proven flashcard method.",
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
-  return (
-    <html lang="en">
-      {process.env.NODE_ENV === "production" && (
-        <GoogleAnalytics gaId="G-Z45JH1JS3K" />
-      )}
-      <body
-        className={cn(
-          "min-h-screen bg-background font-sans antialiased",
-          fontSans.variable,
-        )}
-      >
-        {children}
-        <Footer />
-      </body>
-    </html>
-  );
+export default function RootLayout({ children }: { children: ReactNode }) {
+  return <MemoCardLayout language={"en"}>{children}</MemoCardLayout>;
 }
