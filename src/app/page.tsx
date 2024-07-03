@@ -213,7 +213,7 @@ const LandingPage = () => {
             <div className={"flex"}>
               <a
                 href={links.appBrowser}
-                className="bg-white text-blue-600 px-6 py-3 rounded-l-2xl md:border-r-2 border-blue-600 font-semibold hover:bg-blue-100 transition duration-300"
+                className="bg-white text-blue-600 px-6 py-3 rounded-l-2xl border-r-2 border-blue-600 font-semibold hover:bg-blue-100 transition duration-300"
               >
                 Try in browser
               </a>
