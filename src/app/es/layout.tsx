@@ -4,6 +4,7 @@ import { ReactNode } from "react";
 export const metadata: Metadata = {
   title: "MemoCard",
   keywords: [
+    "memocard",
     "alternativa a anki",
     "aplicación de tarjetas",
     "tarjetas flash ai",

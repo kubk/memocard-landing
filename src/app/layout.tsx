@@ -22,6 +22,7 @@ export const metadata: Metadata = {
     },
   },
   keywords: [
+    "memocard",
     "anki alternative",
     "flashcard app",
     "flashcards ai",
