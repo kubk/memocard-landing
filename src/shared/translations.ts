@@ -111,7 +111,7 @@ const en = {
     awardWinningTitle: "Award-Winning App",
     awardWinningDescription:
       "Scored a prize in the worldwide Telegram mini app competition",
-    usersTitle: "4000+ users",
+    usersTitle: "8000+ users",
     usersDescription: "Join thousands of users",
   },
   useCases: {
@@ -138,6 +138,7 @@ const en = {
     title: "Available Plans",
     free: "Free",
     pro: "Pro",
+    purchasePro: "Purchase for $3/month",
   },
   freePlanFeatures: {
     included: [
@@ -182,6 +183,7 @@ const ru: Translation = {
     title: "Доступные планы",
     free: "Бесплатный",
     pro: "Pro",
+    purchasePro: "Приобрести за $3/месяц",
   },
   whyBetterThanAnki: {
     title: "Почему лучше, чем Anki",
@@ -207,7 +209,7 @@ const ru: Translation = {
     awardWinningTitle: "Победитель конкурса",
     awardWinningDescription: "MemoCard получил приз в конкурсе от Telegram",
     usersDescription: "Присоединяйтесь к тысячам пользователей",
-    usersTitle: "4000+ пользователей",
+    usersTitle: "8000+ пользователей",
   },
   footer: {
     links: {
@@ -324,6 +326,7 @@ const es: Translation = {
     title: "Planes disponibles",
     free: "Gratis",
     pro: "Pro",
+    purchasePro: "Compra por $3/mes",
   },
   whyBetterThanAnki: {
     title: "Por qué es mejor que Anki",
@@ -350,7 +353,7 @@ const es: Translation = {
     awardWinningDescription:
       "Obtuvo un premio en el concurso mundial de mini aplicaciones de Telegram",
     usersDescription: "Únete a miles de usuarios",
-    usersTitle: "4000+ usuarios",
+    usersTitle: "8000+ usuarios",
   },
   footer: {
     links: {
@@ -468,6 +471,7 @@ const ptBr: Translation = {
     title: "Planos disponíveis",
     free: "Grátis",
     pro: "Pro",
+    purchasePro: "Compre por $3/mês",
   },
   proPlanFeatures: {
     included: [
@@ -490,7 +494,7 @@ const ptBr: Translation = {
     awardWinningDescription:
       "Ganhou um prêmio na competição mundial de mini aplicativos do Telegram",
     usersDescription: "Junte-se a milhares de usuários",
-    usersTitle: "4000+ usuários",
+    usersTitle: "8000+ usuários",
   },
   freePlanFeatures: {
     included: [
