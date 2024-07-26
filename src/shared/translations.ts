@@ -111,7 +111,7 @@ const en = {
     awardWinningTitle: "Award-Winning App",
     awardWinningDescription:
       "Scored a prize in the worldwide Telegram mini app competition",
-    usersTitle: "8000+ users",
+    usersTitle: "9000+ users",
     usersDescription: "Join thousands of users",
   },
   useCases: {
@@ -209,7 +209,7 @@ const ru: Translation = {
     awardWinningTitle: "Победитель конкурса",
     awardWinningDescription: "MemoCard получил приз в конкурсе от Telegram",
     usersDescription: "Присоединяйтесь к тысячам пользователей",
-    usersTitle: "8000+ пользователей",
+    usersTitle: "9000+ пользователей",
   },
   footer: {
     links: {
@@ -353,7 +353,7 @@ const es: Translation = {
     awardWinningDescription:
       "Obtuvo un premio en el concurso mundial de mini aplicaciones de Telegram",
     usersDescription: "Únete a miles de usuarios",
-    usersTitle: "8000+ usuarios",
+    usersTitle: "9000+ usuarios",
   },
   footer: {
     links: {
@@ -494,7 +494,7 @@ const ptBr: Translation = {
     awardWinningDescription:
       "Ganhou um prêmio na competição mundial de mini aplicativos do Telegram",
     usersDescription: "Junte-se a milhares de usuários",
-    usersTitle: "8000+ usuários",
+    usersTitle: "9000+ usuários",
   },
   freePlanFeatures: {
     included: [
