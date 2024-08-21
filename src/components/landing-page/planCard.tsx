@@ -1,6 +1,7 @@
 import { Check, X } from "lucide-react";
 import React from "react";
 import { Button } from "@/components/ui/button";
+import { links } from "@/shared/links";
 
 type Props = {
   title: string;
@@ -9,10 +10,12 @@ type Props = {
   isProPlan?: boolean;
 };
 
-export const PlanCard = ({ title, purchaseText, features, isProPlan }: Props) => {
-  const payLink =
-    "https://memocard.lemonsqueezy.com/buy/c6563ccb-8aa0-4a6e-931d-a0cc3740dbbe";
-
+export const PlanCard = ({
+  title,
+  purchaseText,
+  features,
+  isProPlan,
+}: Props) => {
   return (
     <div
       className={`bg-white p-6 rounded-2xl shadow-md ${isProPlan ? "border-2 border-blue-500" : ""}`}
@@ -35,7 +38,7 @@ export const PlanCard = ({ title, purchaseText, features, isProPlan }: Props) =>
         ))}
       </ul>
       {isProPlan ? (
-        <a className={"block mt-4"} href={payLink}>
+        <a className={"block mt-4"} href={links.lsqMonthlySubscription}>
           <Button>{purchaseText}</Button>
         </a>
       ) : null}

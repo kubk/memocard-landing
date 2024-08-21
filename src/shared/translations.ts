@@ -138,7 +138,7 @@ const en = {
     title: "Available Plans",
     free: "Free",
     pro: "Pro",
-    purchasePro: "Purchase for $3/month",
+    purchasePro: "Purchase for $4/month",
   },
   freePlanFeatures: {
     included: [
@@ -183,7 +183,7 @@ const ru: Translation = {
     title: "Доступные планы",
     free: "Бесплатный",
     pro: "Pro",
-    purchasePro: "Приобрести за $3/месяц",
+    purchasePro: "Приобрести за $4/месяц",
   },
   whyBetterThanAnki: {
     title: "Почему лучше, чем Anki",
@@ -326,7 +326,7 @@ const es: Translation = {
     title: "Planes disponibles",
     free: "Gratis",
     pro: "Pro",
-    purchasePro: "Compra por $3/mes",
+    purchasePro: "Compra por $4/mes",
   },
   whyBetterThanAnki: {
     title: "Por qué es mejor que Anki",
@@ -471,7 +471,7 @@ const ptBr: Translation = {
     title: "Planos disponíveis",
     free: "Grátis",
     pro: "Pro",
-    purchasePro: "Compre por $3/mês",
+    purchasePro: "Compre por $4/mês",
   },
   proPlanFeatures: {
     included: [
