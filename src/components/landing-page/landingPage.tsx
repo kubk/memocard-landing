@@ -6,7 +6,7 @@ import { Award, Users } from "lucide-react";
 import { FeatureCard } from "@/components/landing-page/featureCard";
 import { PlanCard } from "@/components/landing-page/planCard";
 import React from "react";
-import { LanguageSwitcher } from "@/components/language-switcher";
+import { LanguageSwitcher } from "@/components/languageSwitcher";
 
 export const LandingPage = (props: {
   translation: Translation;
