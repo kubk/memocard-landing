@@ -55,6 +55,16 @@ export const Footer = (props: { translation: Translation }) => {
         text: "GitHub",
         href: links.github,
       },
+      {
+        icon: ExternalLink,
+        text: translation.footer.links.privacyPolicy,
+        href: links.privacyPolicy,
+      },
+      {
+        icon: ExternalLink,
+        text: translation.footer.links.termsOfService,
+        href: links.termsOfService,
+      },
     ],
   };
 

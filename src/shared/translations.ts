@@ -7,7 +7,6 @@ import {
   PenTool,
   Zap,
 } from "lucide-react";
-import { links } from "@/shared/links";
 
 export enum LanguageEnum {
   en = "en",
@@ -41,6 +40,8 @@ const en = {
       runInTelegram: "Run in Telegram",
       youtubeChannelEn: "YouTube Channel (EN)",
       youtubeChannelRu: "YouTube Channel (RU)",
+      termsOfService: "Terms of Service",
+      privacyPolicy: "Privacy Policy",
       telegramChannel: "Telegram Channel",
     },
     groupTitles: {
@@ -218,6 +219,8 @@ const ru: Translation = {
       runInBrowser: "Запустить в браузере",
       youtubeChannelEn: "YouTube канал (EN)",
       youtubeChannelRu: "YouTube канал (RU)",
+      termsOfService: "Условия использования",
+      privacyPolicy: "Политика конфиденциальности",
       telegramChannel: "Telegram канал",
     },
     groupTitles: {
@@ -362,6 +365,8 @@ const es: Translation = {
       runInBrowser: "Ejecutar en el navegador",
       youtubeChannelEn: "Canal de YouTube (EN)",
       youtubeChannelRu: "Canal de YouTube (RU)",
+      termsOfService: "Términos de servicio",
+      privacyPolicy: "Política de privacidad",
       telegramChannel: "Canal de Telegram",
     },
     groupTitles: {
@@ -521,6 +526,8 @@ const ptBr: Translation = {
       runInBrowser: "Executar no navegador",
       youtubeChannelEn: "Canal do YouTube (EN)",
       youtubeChannelRu: "Canal do YouTube (RU)",
+      termsOfService: "Termos de serviço",
+      privacyPolicy: "Política de privacidade",
       telegramChannel: "Canal do Telegram",
     },
     groupTitles: {
