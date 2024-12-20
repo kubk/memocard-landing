@@ -19,6 +19,7 @@ export const metadata: Metadata = {
       ru: `${links.landing}/ru/`,
       es: `${links.landing}/es/`,
       "pt-br": `${links.landing}/pt-br/`,
+      uk: `${links.landing}/uk/`,
     },
   },
   keywords: [

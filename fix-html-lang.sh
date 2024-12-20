@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Array of locales
-locales=("ru" "es" "pt-br")
+locales=("ru" "es" "pt-br" "uk")
 
 # Output directory
 OUT_DIR="out"
