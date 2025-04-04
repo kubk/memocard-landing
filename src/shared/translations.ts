@@ -53,6 +53,10 @@ const en = {
       other: "Other",
     },
   },
+  what: {
+    title: "What is MemoCard?",
+    description: "A flashcard app and a website to improve your memory",
+  },
   features: {
     title: "Features",
     list: [
@@ -63,22 +67,16 @@ const en = {
           "Create cards, decks, and deck folders to structure your knowledge.",
       },
       {
-        icon: BookOpen,
-        title: "Different Card Types",
+        icon: Zap,
+        title: "Rapid Card Creation",
         description:
-          "Use regular cards or cards with pre-made answers to test your knowledge.",
+          "Generate multiple cards at once for efficient deck building. Use AI to generate cards automatically.",
       },
       {
         icon: Bell,
         title: "Smart Notifications",
         description:
           "Receive daily reminders for cards that need review, optimizing your study time.",
-      },
-      {
-        icon: PenTool,
-        title: "Custom Formatting",
-        description:
-          "Add styling to your cards to emphasize important information.",
       },
       {
         icon: Folder,
@@ -91,21 +89,27 @@ const en = {
         description: "Freeze cards when you need a break or are too busy.",
       },
       {
-        icon: Zap,
-        title: "Rapid Card Creation",
-        description:
-          "Generate multiple cards at once for efficient deck building. Use AI to generate cards automatically.",
-      },
-      {
         icon: Headphones,
         title: "Text-to-Speech",
         description:
           "Learn foreign words with automatic pronunciation features.",
       },
+      {
+        icon: PenTool,
+        title: "Custom Formatting",
+        description:
+          "Add styling to your cards to emphasize important information.",
+      },
+      {
+        icon: BookOpen,
+        title: "Different Card Types",
+        description:
+          "Use regular cards or cards with pre-made answers to test your knowledge.",
+      },
     ],
   },
   hero: {
-    title: "Retain what you learn",
+    title: "[Retain] what you learn",
     description1: `Within an hour, up to 60% of new information can slip away, and by the end of a week, only about 10% remain.`,
     description2: `MemoCard uses the proven flashcard method, making sure you never forget what you learn.`,
     tryBrowser: "Try in browser",
@@ -119,13 +123,23 @@ const en = {
     usersDescription: "Join thousands of users",
   },
   useCases: {
-    title: "Use Cases",
+    title: "What can I learn?",
+    listEnum: {
+      languages: "Languages",
+      medicine: "Medicine",
+      geography: "Geography",
+      music: "Music",
+      programming: "Programming",
+      history: "History",
+      mathematics: "Mathematics",
+      chemistry: "Chemistry",
+    },
     list: [
       "Learn a new language as a tourist",
-      "Memorize complex bash commands or programming constructs",
       "Study Latin names of muscles for medical exams",
       "Improve geography skills",
       "Practice music harmony",
+      "Memorize complex bash commands or programming constructs",
       "Retain key historical facts",
     ],
   },
@@ -189,6 +203,10 @@ const ru: Translation = {
     pro: "Pro",
     purchasePro: "Приобрести за $4/месяц",
   },
+  what: {
+    title: "Что такое MemoCard?",
+    description: "A flashcard app and a website to improve your memory",
+  },
   whyBetterThanAnki: {
     title: "Почему лучше, чем Anki",
     list: [
@@ -200,6 +218,16 @@ const ru: Translation = {
   },
   useCases: {
     title: "Сценарии применения",
+    listEnum: {
+      languages: "Языки",
+      medicine: "Медицина",
+      geography: "География",
+      music: "Музыка",
+      programming: "Программирование",
+      history: "История",
+      mathematics: "Математика",
+      chemistry: "Химия",
+    },
     list: [
       "Изучение нового языка в качестве туриста",
       "Запоминание сложных bash-команд или программных конструкций",
@@ -285,7 +313,7 @@ const ru: Translation = {
     ],
   },
   hero: {
-    title: "Не забывайте то, что запомнили",
+    title: "Не забывайте то, что [запомнили]",
     description1: `В течение часа до 60% новой информации могут выскользнуть из памяти, а к концу недели остаются всего около 10%.`,
     description2: `MemoCard использует проверенный метод интервального повторения, чтобы вы никогда не забывали то, что запомнили.`,
     tryBrowser: "Запустить в браузере",
@@ -334,6 +362,11 @@ const es: Translation = {
     pro: "Pro",
     purchasePro: "Compra por $4/mes",
   },
+  what: {
+    title: "¿Qué es MemoCard?",
+    description:
+      "Una aplicación de tarjetas flash y un sitio web para mejorar tu memoria",
+  },
   whyBetterThanAnki: {
     title: "Por qué es mejor que Anki",
     list: [
@@ -345,6 +378,16 @@ const es: Translation = {
   },
   useCases: {
     title: "Casos de uso",
+    listEnum: {
+      languages: "Idiomas",
+      medicine: "Medicina",
+      geography: "Geografía",
+      music: "Música",
+      programming: "Programación",
+      history: "Historia",
+      mathematics: "Matemáticas",
+      chemistry: "Química",
+    },
     list: [
       "Aprender un nuevo idioma como turista",
       "Memorizar comandos bash complejos o construcciones de programación",
@@ -466,7 +509,7 @@ const es: Translation = {
     ],
   },
   hero: {
-    title: "Retén lo que aprendes",
+    title: "[Retén] lo que aprendes",
     description1: `En una hora, hasta el 60% de la información nueva puede escapar, y al final de una semana, solo queda alrededor del 10%.`,
     description2: `MemoCard utiliza el método de tarjetas de memoria probado, asegurándose de que nunca olvides lo que aprendes.`,
     tryBrowser: "Probar en el navegador",
@@ -481,12 +524,17 @@ const ptBr: Translation = {
     pro: "Pro",
     purchasePro: "Compre por $4/mês",
   },
+  what: {
+    title: "O que é MemoCard?",
+    description:
+      "Uma aplicação de tarjetas flash e um site para melhorar sua memória",
+  },
   proPlanFeatures: {
     included: [
       "Crie um número ilimitado de baralhos, cartões e pastas",
       "Dois tipos de cartões - regulares e com opções de resposta pré-definidas",
       "Notificações sobre cartões para revisão",
-      "Formatação de cartões",
+      "Formato de cartões",
       "Acesso a um catálogo de baralhos de alta qualidade moderado",
       "Congelamento de cartões para fazer uma pausa",
       "Gere rapidamente vários cartões de uma vez",
@@ -509,7 +557,7 @@ const ptBr: Translation = {
       "Crie um número ilimitado de baralhos, cartões e pastas",
       "Dois tipos de cartões - regulares e com opções de resposta pré-definidas",
       "Notificações sobre cartões para revisão",
-      "Formatação de cartões",
+      "Formato de cartões",
       "Acesso a um catálogo de baralhos de alta qualidade moderado",
       "Congelamento de cartões para fazer uma pausa",
       "Gere rapidamente vários cartões de uma vez",
@@ -541,6 +589,16 @@ const ptBr: Translation = {
   },
   useCases: {
     title: "Casos de uso",
+    listEnum: {
+      languages: "Idiomas",
+      medicine: "Medicina",
+      geography: "Geografia",
+      music: "Música",
+      programming: "Programação",
+      history: "História",
+      mathematics: "Matemática",
+      chemistry: "Química",
+    },
     list: [
       "Aprender um novo idioma como turista",
       "Memorizar comandos bash complexos ou construções de programação",
@@ -556,7 +614,7 @@ const ptBr: Translation = {
       "Não precisa de plugins - baterias incluídas",
       "Baralhos e pastas são fáceis de compartilhar via link",
       "Notificações inteligentes integradas via Telegram. Você só as verá quando tiver cartões pendentes para revisão",
-      "Sem uma interface antiga e assustadora, o MemoCard já tem uma boa aparência",
+      "Sem uma interface antiga e assustadora, o MemoCard já tem um bom aspecto",
     ],
   },
   features: {
@@ -613,7 +671,7 @@ const ptBr: Translation = {
     ],
   },
   hero: {
-    title: "Retenha o que você aprende",
+    title: "[Retenha] o que você aprende",
     description1: `Em uma hora, até 60% das novas informações podem escapar, e no final de uma semana, apenas cerca de 10% permanecem.`,
     description2: `O MemoCard usa o método comprovado de cartão de memória, garantindo que você nunca esqueça o que aprendeu.`,
     tryBrowser: "Experimente no navegador",
@@ -628,6 +686,11 @@ const uk: Translation = {
     pro: "Pro",
     purchasePro: "Придбати за $4/місяць",
   },
+  what: {
+    title: "Що таке MemoCard?",
+    description:
+      "Додаток і вебсайт для покращення пам’яті за допомогою флешкарт",
+  },
   proPlanFeatures: {
     included: [
       "Створюйте необмежену кількість колод, карток та папок",
@@ -640,7 +703,7 @@ const uk: Translation = {
       "Автоматичне роботизоване озвучування, що підтримує 50 мов",
       "Автоматичне створення карток за допомогою ІІ",
       "Високоякісне озвучування за допомогою ІІ",
-      "Дублювання колод та цілих папок з колодами та картками",
+      "Дублікування колод та цілих папок з колодами та картками",
       "Одноразові посилання на колоди та папки",
     ],
   },
@@ -665,7 +728,7 @@ const uk: Translation = {
     notIncluded: [
       "Автоматичне створення карток за допомогою ІІ",
       "Високоякісне озвучування за допомогою ІІ",
-      "Дублювання колод та цілих папок з колодами та картками",
+      "Дублікування колод та цілих папок з колодами та картками",
       "Одноразові посилання на колоди та папки",
     ],
   },
@@ -688,8 +751,18 @@ const uk: Translation = {
   },
   useCases: {
     title: "Сценарії використання",
+    listEnum: {
+      languages: "Мови",
+      medicine: "Медицина",
+      geography: "Географія",
+      music: "Музика",
+      programming: "Програмування",
+      history: "Історія",
+      mathematics: "Математика",
+      chemistry: "Хімія",
+    },
     list: [
-      "Вивчення нової мови як турист",
+      "Вивчення нового мови як туриста",
       "Запам'ятовування складних bash-команд або програмних конструкцій",
       "Вивчення латинських назв м'язів для медичних іспитів",
       "Покращення географічних навичок",
@@ -703,7 +776,7 @@ const uk: Translation = {
       "Немає необхідності в плагінах - все включено",
       "Колоди та папки легко ділитися за посиланням",
       "Вбудовані розумні сповіщення через Telegram. Ви побачите їх тільки тоді, коли у вас є картки для повторення",
-      "Немає старого страшного інтерфейсу, MemoCard вже виглядає добре",
+      "Немає старого страшного інтерфейсу, MemoCard вже добре виглядає",
     ],
   },
   features: {
@@ -753,13 +826,12 @@ const uk: Translation = {
       {
         icon: Headphones,
         title: "Автоматичне озвучування",
-        description:
-          "Вивчайте іноземні слова з автоматичною функцією вимови.",
+        description: "Вивчайте іноземні слова з автоматичною функцією вимови.",
       },
     ],
   },
   hero: {
-    title: "Не забувайте те, що вивчили",
+    title: "Не забувайте те, що [вивчили]",
     description1: `Протягом години до 60% нової інформації може вислизнути з пам'яті, а до кінця тижня залишається всього близько 10%.`,
     description2: `MemoCard використовує перевірений метод інтервального повторення, щоб ви ніколи не забували те, що вивчили.`,
     tryBrowser: "Запустити в браузері",

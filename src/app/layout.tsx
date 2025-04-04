@@ -9,6 +9,7 @@ import { links } from "@/shared/links";
 const fontSans = FontSans({
   subsets: ["latin"],
   variable: "--font-sans",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -28,7 +29,7 @@ export const metadata: Metadata = {
     "flashcard app",
     "flashcards ai",
     "create ai flashcards",
-    "memocard ai"
+    "memocard ai",
   ],
   description:
     "Improve your memory with spaced repetition. Learn languages, history or other subjects with the proven flashcard method.",
