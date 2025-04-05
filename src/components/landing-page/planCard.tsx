@@ -10,38 +10,41 @@ type Props = {
   isProPlan?: boolean;
 };
 
-export const PlanCard = ({
-  title,
-  purchaseText,
-  features,
-  isProPlan,
-}: Props) => {
+export function PlanCard({ title, purchaseText, features, isProPlan }: Props) {
   return (
     <div
-      className={`bg-white p-6 rounded-2xl shadow-md ${isProPlan ? "border-2 border-blue-500" : ""}`}
+      className={`p-6 rounded-2xl transition-all duration-200 ${
+        isProPlan
+          ? "bg-gradient-to-br from-blue-50 to-white border-2 border-blue-500 shadow-lg hover:shadow-xl"
+          : "bg-white border border-gray-200 shadow-md hover:border-gray-300 hover:shadow-lg"
+      }`}
     >
       <h3
-        className={`text-2xl font-bold mb-4 ${isProPlan ? "text-blue-600" : "text-gray-800"}`}
+        className={`text-2xl font-bold mb-6 ${
+          isProPlan ? "text-blue-600" : "text-gray-800"
+        }`}
       >
         {title}
       </h3>
-      <ul className="space-y-2">
+      <ul className="space-y-3">
         {features.map((feature: any, index: any) => (
-          <li key={index} className="flex items-start">
+          <li key={index} className="flex items-start group">
             {feature.included ? (
-              <Check className="text-green-500 mr-2 flex-shrink-0" />
+              <Check className="text-green-500 mr-3 flex-shrink-0 group-hover:scale-110 transition-transform" />
             ) : (
-              <X className="text-red-500 mr-2 flex-shrink-0" />
+              <X className="text-red-500 mr-3 flex-shrink-0 group-hover:scale-110 transition-transform" />
             )}
-            <span>{feature.text}</span>
+            <span className="text-gray-600">{feature.text}</span>
           </li>
         ))}
       </ul>
       {isProPlan ? (
-        <a className={"block mt-4"} href={links.lsqMonthlySubscription}>
-          <Button>{purchaseText}</Button>
+        <a className="block mt-6" href={links.lsqMonthlySubscription}>
+          <Button variant="pro" size="lg" className="w-full">
+            {purchaseText}
+          </Button>
         </a>
       ) : null}
     </div>
   );
-};
+}

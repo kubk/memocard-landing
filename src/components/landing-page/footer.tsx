@@ -3,7 +3,7 @@ import { ExternalLink, Github, Mail, Youtube } from "lucide-react";
 import { links } from "@/shared/links";
 import { Translation } from "@/shared/translations";
 
-export const Footer2 = (props: { translation: Translation }) => {
+export function Footer(props: { translation: Translation }) {
   const { translation } = props;
 
   // Define MemoCard footer links using the same structure as in the Footer component
@@ -149,9 +149,11 @@ export const Footer2 = (props: { translation: Translation }) => {
 
         {/* Copyright section */}
         <div className="mt-12 pt-6 border-t border-gray-200 text-center text-sm text-gray-500">
-          <p>© {new Date().getFullYear()} MemoCard. All rights reserved.</p>
+          <p>
+            © 2023 - {new Date().getFullYear()} MemoCard. All rights reserved.
+          </p>
         </div>
       </div>
     </footer>
   );
-};
+}

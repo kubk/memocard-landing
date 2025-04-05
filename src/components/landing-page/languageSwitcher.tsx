@@ -13,7 +13,7 @@ import {
 import Link from "next/link";
 import React from "react";
 
-export const LanguageSwitcher = () => {
+export function LanguageSwitcher() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger>
@@ -30,4 +30,4 @@ export const LanguageSwitcher = () => {
       </DropdownMenuContent>
     </DropdownMenu>
   );
-};
+}

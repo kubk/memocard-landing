@@ -111,7 +111,7 @@ const en = {
   hero: {
     title: "[Retain] what you learn",
     description1: `Within an hour, up to 60% of new information can slip away, and by the end of a week, only about 10% remain.`,
-    description2: `MemoCard uses the proven flashcard method, making sure you never forget what you learn.`,
+    description2: `[MemoCard] uses the proven flashcard method, making sure you never forget what you learn.`,
     tryBrowser: "Try in browser",
     tryTelegram: "Try in Telegram",
   },
@@ -315,7 +315,7 @@ const ru: Translation = {
   hero: {
     title: "Не забывайте то, что [запомнили]",
     description1: `В течение часа до 60% новой информации могут выскользнуть из памяти, а к концу недели остаются всего около 10%.`,
-    description2: `MemoCard использует проверенный метод интервального повторения, чтобы вы никогда не забывали то, что запомнили.`,
+    description2: `[MemoCard] использует проверенный метод интервального повторения, чтобы вы никогда не забывали то, что запомнили.`,
     tryBrowser: "Запустить в браузере",
     tryTelegram: "Запустить в Telegram",
   },
@@ -511,7 +511,7 @@ const es: Translation = {
   hero: {
     title: "[Retén] lo que aprendes",
     description1: `En una hora, hasta el 60% de la información nueva puede escapar, y al final de una semana, solo queda alrededor del 10%.`,
-    description2: `MemoCard utiliza el método de tarjetas de memoria probado, asegurándose de que nunca olvides lo que aprendes.`,
+    description2: `[MemoCard] utiliza el método de tarjetas de memoria probado, asegurándose de que nunca olvides lo que aprendes.`,
     tryBrowser: "Probar en el navegador",
     tryTelegram: "Probar en Telegram",
   },
@@ -673,7 +673,7 @@ const ptBr: Translation = {
   hero: {
     title: "[Retenha] o que você aprende",
     description1: `Em uma hora, até 60% das novas informações podem escapar, e no final de uma semana, apenas cerca de 10% permanecem.`,
-    description2: `O MemoCard usa o método comprovado de cartão de memória, garantindo que você nunca esqueça o que aprendeu.`,
+    description2: `[MemoCard] usa o método comprovado de cartão de memória, garantindo que você nunca esqueça o que aprendeu.`,
     tryBrowser: "Experimente no navegador",
     tryTelegram: "Experimente no Telegram",
   },
@@ -833,7 +833,7 @@ const uk: Translation = {
   hero: {
     title: "Не забувайте те, що [вивчили]",
     description1: `Протягом години до 60% нової інформації може вислизнути з пам'яті, а до кінця тижня залишається всього близько 10%.`,
-    description2: `MemoCard використовує перевірений метод інтервального повторення, щоб ви ніколи не забували те, що вивчили.`,
+    description2: `[MemoCard] використовує перевірений метод інтервального повторення, щоб ви ніколи не забували те, що вивчили.`,
     tryBrowser: "Запустити в браузері",
     tryTelegram: "Запустити в Telegram",
   },

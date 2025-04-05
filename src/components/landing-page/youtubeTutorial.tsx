@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 
-export const YoutubeTutorial = (props: { videoId: string }) => {
+export function YoutubeTutorial(props: { videoId: string }) {
   const { videoId } = props;
   return (
     <div
@@ -26,4 +26,4 @@ export const YoutubeTutorial = (props: { videoId: string }) => {
       ></iframe>
     </div>
   );
-};
+}
