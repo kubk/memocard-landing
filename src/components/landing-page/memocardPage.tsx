@@ -93,7 +93,7 @@ export function MemoCardPage(props: { language: LanguageEnum }) {
 
       <section className="pt-16 md:pt-24 text-center">
         <div className="container mx-auto px-4 max-w-screen-lg lg:max-w-5xl xl:max-w-6xl">
-          <h1 className="text-7xl font-bold mb-4 mt-[24px]">
+          <h1 className={"text-5xl md:text-7xl font-bold mb-4 mt-[24px]"}>
             {renderHighlightedText(translation.hero.title)}
           </h1>
           <p className="text-lg max-w-2xl mx-auto mb-6">
