@@ -11,44 +11,13 @@ import {
   Music2,
   Stethoscope,
 } from "lucide-react";
-import { Fragment, ReactNode } from "react";
 import { getTranslation, LanguageEnum } from "@/shared/translations";
 import { LanguageSwitcher } from "./languageSwitcher";
 import { FeatureCard } from "./featureCard";
 import { PlanCard } from "./planCard";
-
-const demoPreviews: string[] = [
-  "/preview/IMG_4537-portrait.png",
-  "/preview/IMG_4539-portrait.png",
-  "/preview/IMG_4540-portrait.png",
-  "/preview/IMG_4541-portrait.png",
-  "/preview/IMG_4543-portrait.png",
-  "/preview/IMG_4544-portrait.png",
-  "/preview/IMG_4545-portrait.png",
-  "/preview/IMG_4546-portrait.png",
-];
-
-const renderHighlightedText = (text: string, customClassName?: string) => {
-  if (!text) return "";
-
-  const parts = text.split(/\[|\]/);
-  return parts.map((part, index) => {
-    const isHighlighted = index % 2 === 1;
-    return (
-      <Fragment key={index}>
-        {index > 0 && index % 2 === 0 && " "}
-        <span
-          className={
-            isHighlighted ? "bg-gradient-text " + (customClassName || "") : ""
-          }
-        >
-          {part}
-        </span>
-        {index % 2 === 0 && index < parts.length - 1 && " "}
-      </Fragment>
-    );
-  });
-};
+import { TryActionButton } from "./tryActionButton";
+import { renderHighlightedText } from "./renderHighlightedText";
+import { demoPreviews } from "./demoPreviews";
 
 export function MemoCardPage(props: { language: LanguageEnum }) {
   const { language } = props;
@@ -103,19 +72,8 @@ export function MemoCardPage(props: { language: LanguageEnum }) {
               "font-semibold",
             )}
           </p>
-          <div className={"flex justify-center my-10"}>
-            <a
-              href={links.appBrowser}
-              className="shadow-md bg-gradient-to-r from-blue-500 to-blue-600 text-white px-6 py-3 rounded-l-2xl border-r border-white font-semibold hover:from-blue-600 hover:to-blue-700 transition duration-300"
-            >
-              {translation.hero.tryBrowser}
-            </a>
-            <a
-              href={links.appTelegram}
-              className="shadow-md flex gap-2 items-center bg-gradient-to-r from-blue-500 to-blue-600 text-white px-6 py-3 rounded-r-2xl font-semibold hover:from-blue-600 hover:to-blue-700 transition duration-300"
-            >
-              {translation.hero.tryTelegram}
-            </a>
+          <div className={"my-10"}>
+            <TryActionButton translation={translation} />
           </div>
         </div>
       </section>
@@ -174,19 +132,8 @@ export function MemoCardPage(props: { language: LanguageEnum }) {
       </section>
 
       <section>
-        <div className={"flex justify-center my-12 mt-14"}>
-          <a
-            href={links.appBrowser}
-            className="shadow-md bg-gradient-to-r from-blue-500 to-blue-600 text-white px-6 py-3 rounded-l-2xl border-r border-white font-semibold hover:from-blue-600 hover:to-blue-700 transition duration-300"
-          >
-            {translation.hero.tryBrowser}
-          </a>
-          <a
-            href={links.appTelegram}
-            className="shadow-md flex gap-2 items-center bg-gradient-to-r from-blue-500 to-blue-600 text-white px-6 py-3 rounded-r-2xl font-semibold hover:from-blue-600 hover:to-blue-700 transition duration-300"
-          >
-            {translation.hero.tryTelegram}
-          </a>
+        <div className={"my-12 mt-14"}>
+          <TryActionButton translation={translation} />
         </div>
       </section>
 
