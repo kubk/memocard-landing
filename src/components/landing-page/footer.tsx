@@ -70,7 +70,7 @@ export function Footer(props: { translation: Translation }) {
 
   return (
     <footer className="bg-gray-50 py-12">
-      <div className="container mx-auto px-4 max-w-screen-lg lg:max-w-5xl xl:max-w-6xl">
+      <div className="container mx-auto px-4 max-w-(--breakpoint-lg) lg:max-w-5xl xl:max-w-6xl">
         {/* MemoCard Footer Section - Only shown if translation is provided */}
         <div>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">

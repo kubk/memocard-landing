@@ -15,7 +15,7 @@ export function PlanCard({ title, purchaseText, features, isProPlan }: Props) {
     <div
       className={`p-6 rounded-2xl transition-all duration-200 ${
         isProPlan
-          ? "bg-gradient-to-br from-blue-50 to-white border-2 border-blue-500 shadow-lg hover:shadow-xl"
+          ? "bg-linear-to-br from-blue-50 to-white border-2 border-blue-500 shadow-lg hover:shadow-xl"
           : "bg-white border border-gray-200 shadow-md hover:border-gray-300 hover:shadow-lg"
       }`}
     >
@@ -30,9 +30,9 @@ export function PlanCard({ title, purchaseText, features, isProPlan }: Props) {
         {features.map((feature: any, index: any) => (
           <li key={index} className="flex items-start group">
             {feature.included ? (
-              <Check className="text-green-500 mr-3 flex-shrink-0 group-hover:scale-110 transition-transform" />
+              <Check className="text-green-500 mr-3 shrink-0 group-hover:scale-110 transition-transform" />
             ) : (
-              <X className="text-red-500 mr-3 flex-shrink-0 group-hover:scale-110 transition-transform" />
+              <X className="text-red-500 mr-3 shrink-0 group-hover:scale-110 transition-transform" />
             )}
             <span className="text-gray-600">{feature.text}</span>
           </li>

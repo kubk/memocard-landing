@@ -1,6 +1,6 @@
 const siteUrl = 'https://memocard.org';
 
-const alternativeLanguages = ['ru', 'es', 'pt-br'];
+const alternativeLanguages = ['ru', 'es', 'pt-br', 'uk'];
 
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {

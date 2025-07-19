@@ -7,13 +7,13 @@ export function TryActionButton(props: { translation: Translation }) {
     <div className={"flex justify-center"}>
       <a
         href={links.appBrowser}
-        className="shadow-md flex gap-2 items-center bg-gradient-to-l from-blue-500 to-blue-600 text-white px-6 py-3 rounded-l-2xl font-semibold hover:from-blue-600 hover:to-blue-700 transition duration-300"
+        className="shadow-md flex gap-2 items-center bg-linear-to-l from-blue-500 to-blue-600 text-white px-6 py-3 rounded-l-2xl font-semibold hover:from-blue-600 hover:to-blue-700 transition duration-300"
       >
         {translation.hero.tryBrowser}
       </a>
       <a
         href={links.appTelegram}
-        className="shadow-md flex gap-2 items-center bg-gradient-to-r from-blue-500 to-blue-600 text-white px-6 py-3 rounded-r-2xl font-semibold hover:from-blue-600 hover:to-blue-700 transition duration-300"
+        className="shadow-md flex gap-2 items-center bg-linear-to-r from-blue-500 to-blue-600 text-white px-6 py-3 rounded-r-2xl font-semibold hover:from-blue-600 hover:to-blue-700 transition duration-300"
       >
         {translation.hero.tryTelegram}
       </a>
